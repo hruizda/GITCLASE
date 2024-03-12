@@ -167,7 +167,73 @@
                 </div>
                 <div class="container-hombre"> <!--Cuadro azul con la foto del hombre-->
                     <img class="foto-hombre" src="/imagenes/Hombre.png" alt="">
-                    
+                               
+											
+				<div class="container">
+					<div class='editar-foto'>
+					<img id="image" src="ruta_de_la_imagen.jpg" alt="Imagen">
+					<br>
+					<a href="https://www.ejemplo.com"><img src="ruta_de_la_imagen.jpg" alt="Imagen anclada"></a>
+					<br>
+					<input type="checkbox" id="checkbox"> Mostrar/ocultar imagen
+					<br><br>
+					<input type="range" id="range" min="50" max="200" value="100"> Modificar tamaño de la imagen
+					<br><br>
+					<div id="progressBar">
+					<div id="progress" style="width: 0%;">0%</div>
+					</div>
+			</div>
+					</div>
+					
+					<script>
+						const image = document.getElementById('image');
+						const checkbox = document.getElementById('checkbox');
+						const range = document.getElementById('range');
+						const progressBar = document.getElementById('progress');
+						const progressValue = document.getElementById('progress').style;
+					
+						checkbox.addEventListener('change', () => {
+							if (checkbox.checked) {
+								image.style.display = 'block';
+							} else {
+								image.style.display = 'none';
+							}
+						});
+					
+						range.addEventListener('input', () => {
+							const value = range.value;
+							image.style.width = `${value}%`;
+						});
+					
+						// Simulando la progresión de una barra de progreso
+						let progress = 0;
+						setInterval(() => {
+							progress += 10;
+							if (progress > 100) progress = 0;
+							progressBar.style.width = `${progress}%`;
+							progressBar.textContent = `${progress}%`;
+						}, 1000);
+					</script>
+	
+	
+						<div class='progressBar'
+						<div class='editar-foto-cont'></div>
+						<div class='editar-foto-cont'></div>
+						<input type="checkbox" id="cbox2" value="second_checkbox"
+						<div class='editar-foto-cont'></div>
+						<div class='editar-foto-cont'></div>
+					</div>
+                    <form>
+                </div>
+				
+				
+				
+                </div>
+
+ 
+
+
+				  
                 </div>
 
             
